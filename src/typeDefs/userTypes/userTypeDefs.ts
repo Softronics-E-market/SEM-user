@@ -9,5 +9,6 @@ export default `
 
     type Query {
         getUser(userUuid: ID!): User!
+        verifyUserOrder(userUuid: ID!, orderUuid: ID!): Boolean!
     }
 `;

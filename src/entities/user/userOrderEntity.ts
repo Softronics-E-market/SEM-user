@@ -8,7 +8,7 @@ export class UserOrder {
   @Column({ type: "uuid", nullable: false, name: "user_uuid" })
   userUuid: string;
 
-  @Column({ type: "uuid", nullable: false, name: "order_uuid" })
+  @Column({ type: "uuid", nullable: false, name: "order_id" })
   orderUuid: string;
 
   @Column({ type: "timestamp", nullable: false, name: "created_timestamp" })
