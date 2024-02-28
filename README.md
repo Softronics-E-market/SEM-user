@@ -8,7 +8,7 @@ This is a microservice built with Node.js for managing user-related functionalit
 
 - **User Management**: Create, read, update, and delete user profiles.
 - **Authentication**: Secure endpoints with JWT-based authentication.
-- **Data Persistence**: Store user data in a database (e.g., MongoDB).
+- **Data Persistence**: Store user data in a database (e.g., Postgres).
 
 ## Installation
 
@@ -17,12 +17,6 @@ This is a microservice built with Node.js for managing user-related functionalit
 3. Set up environment variables (see `.env.example` for required variables).
 4. Run the application using `npm serve`.
 
-## Usage
-
-### Authentication
-
-- **POST /auth/login**: Authenticate user and generate JWT token.
-- **POST /auth/register**: Register a new user.
 
 ## Configuration
 

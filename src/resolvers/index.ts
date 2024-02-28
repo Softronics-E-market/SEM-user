@@ -1,5 +1,5 @@
-import TestResolver from "./TestResolvers";
-import userResolver from "./user/userResolver";
+import TestResolver from "./test.resolver";
+import userResolver from "./user/user.resolver";
 
 
 const resolvers = [TestResolver, userResolver];

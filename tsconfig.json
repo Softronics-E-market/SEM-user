@@ -3,6 +3,7 @@
       "lib": ["es6", "dom", "esnext.asynciterable"],
       "module": "commonjs",
       "noImplicitReturns": false,
+      "esModuleInterop": true,
       "outDir": "lib",
       "sourceMap": true,
       "allowSyntheticDefaultImports": true,
