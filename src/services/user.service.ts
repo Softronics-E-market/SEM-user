@@ -9,6 +9,10 @@ import { LogEvent } from '../enums/logEvents.enum';
 export default class UserService {
   private logger: Logger;
 
+  constructor() {
+    this.logger = new Logger();
+  }
+
   public getUser = async (userUuid: string): Promise<User> => {
     try {
       const userRepo = (await dbConn()).getRepository(UserEntity);
@@ -34,13 +38,14 @@ export default class UserService {
 
       return user;
     } catch (error) {
-      this.logger.log({
+      const customeError = {
         action: LogEvent.GET_USER,
         message: `Failed to fetch user`,
         error: JSON.stringify(error),
-      });
+      };
+      this.logger.log(customeError);
 
-      throw error;
+      throw new Error(customeError.message);
     }
   };
 
