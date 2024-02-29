@@ -1,5 +1,5 @@
 import UserService from '../../services/user.service';
-import { User } from '../../types/users/userTypes';
+import { AddUserInput, User } from '../../types/users/userTypes';
 
 const userResolver = {
   Query: {
@@ -9,6 +9,13 @@ const userResolver = {
       parent: unknown,
       args: { userUuid: string; orderUuid: string },
     ): Promise<boolean> => new UserService().verifyUserOrder({ ...args }),
+  },
+  Mutation: {
+    addUser: (
+      parent: unknown,
+      args: { userInput: AddUserInput },
+    ): Promise<User> =>
+      new UserService().addUser({ addUserInput: args.userInput }),
   },
 };
 
